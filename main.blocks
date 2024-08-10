@@ -1,0 +1,19 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables></variables><block type="pxt-on-start" id="FG[rbYbpdR|[DG6EZio," x="0" y="0"><statement name="HANDLER"><block type="device_show_leds" id="l2hluz+uJ:4-gO*B#Gp%"><field name="LEDS">`
+        # . . # # 
+        # . . # # 
+        # # . . . 
+        # . # . . 
+        # # . . .
+        `</field><next><block type="MotorStop" id="lcY[CPjmCMTOUlkfa[vp"><field name="Motor">Motor.A</field><next><block type="MotorStop" id="xAva-e8lWm5Vi}Qz{`TK"><field name="Motor">Motor.B</field></block></next></block></next></block></statement></block><block type="bluetooth_on_connected" id="O__ggDlLMg9=SBO:)ns}" x="300" y="-7"><statement name="HANDLER"><block type="device_show_leds" id="iBBiHBf4ymkW;Rs49om{"><field name="LEDS">`
+        # # . # # 
+        # # . # # 
+        . . # . . 
+        # . . . # 
+        . # # # .
+        `</field></block></statement></block><block type="bluetooth_on_disconnected" id="}$dlo1Q{2R,S46x|_ZlG" x="566" y="0"><statement name="HANDLER"><block type="device_show_leds" id="%(X?k}O+H@?X+Otd5+sW"><field name="LEDS">`
+        # # . # # 
+        # # . # # 
+        . . # . . 
+        . # # # . 
+        # . . . #
+        `</field></block></statement></block><block type="control_on_event" id="!77N`_}b5MZ2!~=m=4D4" x="238" y="462"><value name="src"><shadow type="control_event_source_id" id="YVIYA}Z+O/*rlalOd@yI"><field name="id">EventBusSource.MES_DPAD_CONTROLLER_ID</field></shadow></value><value name="value"><shadow type="control_event_value_id" id=")uZZG-zX0b+7]p,xbd)?"><field name="id">EventBusValue.MICROBIT_EVT_ANY</field></shadow></value></block></xml>

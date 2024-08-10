@@ -1,0 +1,28 @@
+{
+    "name": "RobotBluetooth",
+    "description": "",
+    "dependencies": {
+        "core": "*",
+        "microphone": "*",
+        "microbit-pxt-blehid - Copy": "github:bsiever/microbit-pxt-blehid#v0.1.0",
+        "bluetooth": "*",
+        "pxt-Motor": "github:vopvivy/MicroBitMotorDriver#329bc91066f901e3ccfdadd4d49d056f4a632df7"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md",
+        "main.py"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "target": "7.0.17",
+        "targetId": "microbit"
+    },
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "blocksprj"
+}
