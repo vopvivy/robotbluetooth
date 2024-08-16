@@ -98,7 +98,8 @@ control.onEvent(EventBusSource.MES_DPAD_CONTROLLER_ID, EventBusValue.MICROBIT_EV
             . # # # .
             `)
     } else if (control.eventValue() == EventBusValue.MES_DPAD_BUTTON_1_DOWN) {
-        speedMotorValue += 10
+        speedMotorValue += Math.constrain(speedMotorValue + 10, 10, 90)
+        basic.showNumber(speedMotorValue / 10)
     } else if (control.eventValue() == EventBusValue.MES_DPAD_BUTTON_1_UP) {
         basic.showLeds(`
             . # # # .
@@ -108,7 +109,8 @@ control.onEvent(EventBusSource.MES_DPAD_CONTROLLER_ID, EventBusValue.MICROBIT_EV
             . # # # .
             `)
     } else if (control.eventValue() == EventBusValue.MES_DPAD_BUTTON_2_DOWN) {
-        speedMotorValue += -10
+        speedMotorValue += Math.constrain(speedMotorValue - 10, 10, 90)
+        basic.showNumber(speedMotorValue / 10)
     } else if (control.eventValue() == EventBusValue.MES_DPAD_BUTTON_2_UP) {
         basic.showLeds(`
             . # # # .
