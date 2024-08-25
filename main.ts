@@ -100,10 +100,10 @@ control.onEvent(EventBusSource.MES_DPAD_CONTROLLER_ID, EventBusValue.MICROBIT_EV
             . # # # .
             `)
     } else if (control.eventValue() == EventBusValue.MES_DPAD_BUTTON_A_DOWN) {
-        speedMotorValue += 10
-        speedMotorValue = Math.constrain(speedMotorValue, 10, 90)
+        speedMotorValue += 1
+        speedMotorValue = Math.constrain(speedMotorValue, 0, 16)
         basic.clearScreen()
-        basic.showNumber(speedMotorValue / 10)
+        basic.showNumber(speedMotorValue)
     } else if (control.eventValue() == EventBusValue.MES_DPAD_BUTTON_A_UP) {
         basic.showLeds(`
             . # # # .
@@ -113,10 +113,10 @@ control.onEvent(EventBusSource.MES_DPAD_CONTROLLER_ID, EventBusValue.MICROBIT_EV
             . # # # .
             `)
     } else if (control.eventValue() == EventBusValue.MES_DPAD_BUTTON_B_DOWN) {
-        speedMotorValue += -10
-        speedMotorValue = Math.constrain(speedMotorValue, 10, 90)
+        speedMotorValue += -1
+        speedMotorValue = Math.constrain(speedMotorValue, 0, 16)
         basic.clearScreen()
-        basic.showNumber(speedMotorValue / 10)
+        basic.showNumber(speedMotorValue)
     } else if (control.eventValue() == EventBusValue.MES_DPAD_BUTTON_B_UP) {
         basic.showLeds(`
             . # # # .
@@ -128,7 +128,8 @@ control.onEvent(EventBusSource.MES_DPAD_CONTROLLER_ID, EventBusValue.MICROBIT_EV
     }
 })
 let speedMotorValue = 0
-speedMotorValue = 10
+// speed.min=0 speed.max=16
+speedMotorValue = 0
 MotorDriver.MotorStop(Motor.A)
 MotorDriver.MotorStop(Motor.B)
 basic.showLeds(`
