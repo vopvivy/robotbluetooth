@@ -129,7 +129,7 @@ control.onEvent(EventBusSource.MES_DPAD_CONTROLLER_ID, EventBusValue.MICROBIT_EV
 })
 let speedMotorValue = 0
 // speed.min=0 speed.max=16
-speedMotorValue = 0
+speedMotorValue = 10
 MotorDriver.MotorStop(Motor.A)
 MotorDriver.MotorStop(Motor.B)
 basic.showLeds(`
